@@ -1,14 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View, ImageBackground } from 'react-native';
+import Header from './components/Header';
+import Home from './screens/Home';
+
+const theme = {
+  colors: {
+    ten: '#B68D40',
+    cream: '#F4EBD0',
+    charcoal: '#122620',
+    gold: '#D6AD60'
+  }
+};
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Space Cadet!</Text>
+        <Header />
       <ImageBackground source={require('./assets/history-in-hd-unsplash.jpg')} resizeMode="cover" style={styles.image}>
-        
         <StatusBar style="auto" />
+        <Home />
       </ImageBackground>
     </View>
   );
@@ -16,17 +27,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  text: {
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 30,
-    position: 'absolute',
-    zIndex: 1,
-    top: 50
+    flex: 1
   },
   image: {
     flex: 1,
