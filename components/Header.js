@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 const Header = () => {
-
     return(
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Space Cadet</Text>
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D6AD60'
   },
   headerTitle: {
-    fontSize: 20
+    fontSize: 30
   }
   });
 
