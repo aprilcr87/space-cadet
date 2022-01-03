@@ -1,28 +1,26 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Card } from 'react-native-elements';
+import { View, StyleSheet } from 'react-native';
+import { Card, Text } from 'react-native-elements';
+import { useSelector } from 'react-redux';
+import { apod } from '../data/mockData';
 
 const Apod = () => {
 
-
     return(
         <View style={styles.screen}>
-            <Text style={styles.text}>Apod</Text>
-            {/* <Card>
-            <Card.Title>HELLO WORLD</Card.Title>
-            <Card.Divider />
-            <Card.Image
-              style={{ padding: 0 }}
-              source={{
-                uri:
-                  'https://awildgeographer.files.wordpress.com/2015/02/john_muir_glacier.jpg',
-              }}
-            />
-            <Text style={{ marginBottom: 10 }}>
-              The idea with React Native Elements is more about component
-              structure than actual design.
-            </Text>
-          </Card> */}
+            {apod ? <Card>
+              <Card.Title>{apod.title}</Card.Title>
+              <Text>{apod.date}</Text>
+              <Card.Divider />
+              <Card.Image
+                style={{ padding: 0, height: 200, resizeMode: 'contain' }}
+                source={{ uri: apod.url }}
+              />
+              <Text style={{ marginBottom: 10 }}>
+                {apod.explanation}
+              </Text>
+              <Text>{apod.copyright}</Text>
+          </Card> : ''}
         </View>
     );
 }
