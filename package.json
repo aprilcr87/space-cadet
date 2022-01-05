@@ -15,6 +15,7 @@
     "expo": "~43.0.2",
     "expo-dev-client": "~0.6.3",
     "expo-status-bar": "~1.1.0",
+    "lodash": "^4.17.21",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
@@ -27,9 +28,7 @@
     "react-navigation": "^4.4.4",
     "react-navigation-drawer": "^2.7.1",
     "react-navigation-stack": "^2.10.4",
-    "react-navigation-tabs": "^2.11.1",
-    "react-redux": "^7.2.6",
-    "redux": "^4.1.2"
+    "react-navigation-tabs": "^2.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
